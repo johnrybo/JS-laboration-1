@@ -4,5 +4,5 @@
 <p>Uppgiften gick ut på att...</p>
 
 // Demo-länk
-<br><br>
+<br>
 https://johnrybo.github.io/JS-laboration-1/
