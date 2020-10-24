@@ -1,0 +1,50 @@
+body {
+    background-color: #283329;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    color: #759679;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.gameContainer {
+    background-color: #3A4A3C;
+    padding: 3rem;
+    width: 40rem;
+}
+
+.taskTitle {
+    color: #A7D6AD;
+}
+
+.taskDescription {
+    color: #FFFFFF;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    color: #A7D6AD;
+    font-weight: 600;
+}
+
+#answer {
+    background-color: #FFFFFF;
+    width: 15rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    border-radius: 1000rem;
+    border: none;
+}
