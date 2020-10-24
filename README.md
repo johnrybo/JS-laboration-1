@@ -1,9 +1,9 @@
 # JS-laboration-1
 
-// Beskrivning av uppgiften
+<b>Beskrivning av uppgiften</b>
 <br>
 Uppgiften gick ut på att...
 
-// Demo-länk
+<b>Demo-länk</b>
 <br>
 https://johnrybo.github.io/JS-laboration-1/
