@@ -17,20 +17,25 @@
 
 <main>
 
-<div class="gameContainer">
+<div id="gameContainer">
 
-    <h2 class="taskTitle">Task Title</h2>
-    <p class="taskDescription">
+    <h2 id="taskTitle">Uppgiftsbeskrivning</h2>
+    <p id="taskDescription">
         
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Et delectus reiciendis numquam laboriosam, quas aspernatur praesentium. 
-        Iusto labore ducimus, hic minima tenetur mollitia voluptates repudiandae 
-        accusantium saepe quidem, molestias blanditiis.</p>
+        Du har två alternativ: hoppa eller ducka, vad väljer du?</p>
 
-    <form class="inputForm">
+    <!--
+        http://isolani.co.uk/articles/simpleJavascriptAndForms.html
 
-        <label class="inputLabel" for="answer">Write your answer below</label>
-        <input type="text" name="answer" id="answer" placeholder="Answer">
+        This piece of markup, in a browser with Javascript enabled, 
+        stops the form from being submitted.
+    -->
+ 
+    <form id="inputForm" onsubmit="return false;">
+
+        <label id="inputLabel" for="answer">Skriv ditt svar nedan</label>
+        <input type="text" name="answer" id="answer" placeholder="Svar">
+        <input type="submit" value="Skicka svar" id="submitAnswer" onclick="getAnswer();">
 
     </form>
 

@@ -16,33 +16,58 @@ main {
     justify-content: center;
 }
 
-.gameContainer {
+#gameContainer {
     background-color: #3A4A3C;
     padding: 3rem;
     width: 40rem;
 }
 
-.taskTitle {
+#taskTitle {
     color: #A7D6AD;
 }
 
-.taskDescription {
+#taskDescription {
     color: #FFFFFF;
 }
 
-.inputForm {
+#inputForm {
     display: flex;
     flex-direction: column;
 }
 
-.inputLabel {
+#inputLabel {
     color: #A7D6AD;
     font-weight: 600;
 }
 
+/* Användarens input */
+
 #answer {
     background-color: #FFFFFF;
     width: 15rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    border-radius: 1000rem;
+    border: none;
+}
+
+/* Knapp för att skicka svar */
+
+#submitAnswer {
+    background-color: #A7D6AD;
+    width: 10rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    border-radius: 1000rem;
+    border: none;
+}
+
+/* Knapp som skapas när användaren får GAME OVER */
+
+#gameContainer button {
+    background-color: firebrick;
+    color: white;
+    width: 10rem;
     margin-top: .5rem;
     padding: .5rem;
     border-radius: 1000rem;
