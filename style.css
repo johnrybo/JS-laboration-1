@@ -3,18 +3,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-}
-
-header h1 {
+h1 {
     color: #759679;
 }
 
 main {
     display: flex;
+    height: 90vh;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #gameContainer {
