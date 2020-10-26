@@ -84,13 +84,13 @@ main {
 }
 
 #manWithHat {
-    width: 200px;
+    width: 15rem;
     height: auto;
     display: none;
 }
 
 #lion {
-    width: 300px;
+    width: 25rem;
     height: auto;
     display: none;
 }
