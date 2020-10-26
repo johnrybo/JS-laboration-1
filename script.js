@@ -174,7 +174,7 @@ function task3_1(input) {
 
     } else if (input !== 'lejon') {
     taskDescription.innerText =
-        "Fel! Rätt svar är: lejon. Du blev tyvärr uppätten. GAME OVER!";
+        "Fel! Rätt svar är: lejon. Du blev tyvärr uppäten. GAME OVER!";
 
     lion.style.display = "none";
     answer3_1Button.style.display = "none";
