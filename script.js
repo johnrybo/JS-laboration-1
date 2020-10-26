@@ -72,8 +72,20 @@ function startOver() {
     location.reload();
 }
 
+// Funktion som styr vad Enter-knappen gör när ett textfält är markerat
+
+    /*
+    textInputField.addEventListener("keyup", function(event) {
+        if (event.key === 'Enter') {
+         event.preventDefault();
+         document.getElementById('answer1').click();
+        }
+      });
+    */
+
 // Funktioner för olika tasks
 function task1(input) {
+
   if (input == "hoppa") {
     taskTitle.innerText = "Uppgift 2.1";
     taskDescription.innerText =
@@ -145,6 +157,7 @@ function task2_ducka(input) {
 }
 
 function task3_1(input) {
+
     if (input == 'lejon') {
         taskTitle.innerText = "Bra jobbat!";
         taskDescription.innerText =
