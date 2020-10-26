@@ -8,8 +8,14 @@ function getAnswer() {
     
     if (userInput === 'hoppa') {
         taskDescription.innerText = 'Du valde att hoppa. För att komma vidare måste du...';
+
+        // Funktion som är specifik för alternativet "hoppa"
+
     } else if (userInput === 'ducka') {
         taskDescription.innerText = 'Du valde att ducka. För att komma vidare måste du...';
+
+        // Funktion som är specifik för alternativet "ducka"
+
     } else {
         taskDescription.innerText = 'Du valde varken att hoppa eller att ducka. GAME OVER';
      
