@@ -1,3 +1,7 @@
+// gameRules
+// let gameRules = document.getElementById('gameRules');
+// gameRules.innerText = 'Klicka på "Skicka svar" när du fyllt i ditt svar i textfältet. Använd inte Enter-tangenten. Uppdatera sidan för att börja om från början';
+
 // taskTitle och taskDescription
 let taskTitle = document.getElementById("taskTitle");
 let taskDescription = document.getElementById("taskDescription");
