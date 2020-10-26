@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboration 1</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     
@@ -19,10 +18,8 @@
 
 <div id="gameContainer">
 
-    <h2 id="taskTitle">Uppgiftsbeskrivning</h2>
-    <p id="taskDescription">
-        
-        Du har två alternativ: hoppa eller ducka, vad väljer du?</p>
+    <h2 id="taskTitle"></h2>
+    <p id="taskDescription"></p>
 
     <!--
         http://isolani.co.uk/articles/simpleJavascriptAndForms.html
@@ -30,18 +27,27 @@
         This piece of markup, in a browser with Javascript enabled, 
         stops the form from being submitted.
     -->
- 
+
+    <img id="manWithHat" src="images/manWithHat.jpg">
+
     <form id="inputForm" onsubmit="return false;">
 
-        <label id="inputLabel" for="answer">Skriv ditt svar nedan</label>
-        <input type="text" name="answer" id="answer" placeholder="Svar">
-        <input type="submit" value="Skicka svar" id="submitAnswer" onclick="getAnswer();">
+        <label id="inputLabel" for="textInputField">Skriv ditt svar nedan</label>
+        <input type="text" name="textInputField" id="textInputField" placeholder="Svar">
+
+        <button type ="submit" id="firstAnswer" class="greenButton" onclick="submitFirstAnswer();">Skicka svar</button>
+        <button type ="submit" id="secondAnswer" class="greenButton" onclick="submitSecondAnswer();">Skicka svar (2)</button>
+        <button type ="submit" id="thirdAnswer" class="greenButton" onclick="submitThirdAnswer();">Skicka svar (3)</button>
+
+        <button type ="submit" id="startOver" class="redButton" onclick="location.reload();">Börja om från början</button>
 
     </form>
 
 </div>
 
 </main>
+
+<script src="script.js"></script>
 
 </body>
 </html>

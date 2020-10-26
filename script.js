@@ -1,40 +1,160 @@
-function getAnswer() {
+function startGame() {
+  // let gameContainer = document.getElementById("gameContainer");
+  let taskTitle = document.getElementById("taskTitle");
+  let taskDescription = document.getElementById("taskDescription");
 
-    let gameContainer = document.getElementById('gameContainer');
-    let taskTitle = document.getElementById('taskTitle');
-    let taskDescription = document.getElementById('taskDescription');
+  taskTitle.innerText = "Uppgift 1";
+  taskDescription.innerText =
+    "Ett objekt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad?";
+}
 
-    var userInput = document.getElementById("answer").value;
-    
-    if (userInput === 'hoppa') {
-        taskDescription.innerText = 'Du valde att hoppa. För att komma vidare måste du...';
-
-        // Funktion som är specifik för alternativet "hoppa"
-            // T.ex. svara rätt på ett mattetal
-
-    } else if (userInput === 'ducka') {
-        taskDescription.innerText = 'Du valde att ducka. För att komma vidare måste du...';
-
-        // Funktion som är specifik för alternativet "ducka"
-            // T.ex. svara rätt på vem en person på en bild som dyker upp är
-
-    } else {
-        taskDescription.innerText = 'Du valde varken att hoppa eller att ducka. GAME OVER';
-     
-        // Hämtar "skicka svar-knappen" från DOM
-        let answerButton = document.getElementById('submitAnswer');
-
-        // Anger att answerButton inte ska visas
-        answerButton.style.display = 'none';
-
-        // Skapar en ny knapp
-        let startOverButton = document.createElement('button');
-
-        // Lägger til den nya knappen i gameContainer
-        gameContainer.append(startOverButton);
-
-        // Anger vad knappen ska innehålla för text
-        startOverButton.innerHTML = 'Börja om från början';
-    }
+function submitFirstAnswer() {
+  var userInput = document.getElementById("textInputField").value;
+  task1(userInput);
+  document.getElementById('textInputField').value = '';
 
 }
+
+function submitSecondAnswer() {
+  var userInput = document.getElementById("textInputField").value;
+  task2_hoppa(userInput);
+  document.getElementById('textInputField').value = '';
+}
+
+function submitThirdAnswer() {
+  var userInput = document.getElementById("textInputField").value;
+  task2_ducka(userInput);
+  document.getElementById('textInputField').value = '';
+}
+
+function task1(input) {
+  if (input == "hoppa") {
+    taskTitle.innerText = "Uppgift 2.1";
+    taskDescription.innerText =
+      "Snyggt hoppat! Du blev väldigt törstig av hoppandet och bestämmer dig för att gå och köpa en öl, men för att komma in på den närmsta baren ber dörrvakten dig att svara rätt på följande kluriga mattetal: vad är 5 + 5?";
+ 
+    // Hämtar firstAnswerButton från DOM
+    let firstAnswerButton = document.getElementById("firstAnswer");
+
+    // Anger att answerButton inte ska visas
+    firstAnswerButton.style.display = "none";
+
+    // Hämtar secondAnswerButton från DOM
+    secondAnswerButton = document.getElementById("secondAnswer");
+
+    // Anger att secondAnswerButton ska visas
+    secondAnswerButton.style.display = "block";
+
+  } else if (input == "ducka") {
+    taskTitle.innerText = "Uppgift 2.2";
+    taskDescription.innerText =
+      "En man som blev imponerad av hur snabbt du duckade kommer fram till dig och undrar vilken färg hans hatt är. Hjälp honom för att gå vidare";
+
+    let manWithHat = document.getElementById("manWithHat");
+    manWithHat.style.display = "block";
+
+    // Hämtar firstAnswerButton från DOM
+    let firstAnswerButton = document.getElementById("firstAnswer");
+
+    // Anger att answerButton inte ska visas
+    firstAnswerButton.style.display = "none";
+
+    // Hämtar thirdAnswerButton från DOM
+    thirdAnswerButton = document.getElementById("thirdAnswer");
+
+    // Anger att secondAnswerButton ska visas
+    thirdAnswerButton.style.display = "block";
+
+  } else {
+    taskDescription.innerText =
+      "Du valde varken att hoppa eller att ducka och blev träffad av objektet. GAME OVER!";
+
+    // Hämtar firstAnswerButton från DOM och anger att den inte ska visas
+    let firstAnswerButton = document.getElementById("firstAnswer");
+    firstAnswerButton.style.display = "none";
+
+    // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
+    let inputLabel = document.getElementById('inputLabel');
+    inputLabel.style.display = 'none';
+
+    let textInputField = document.getElementById('textInputField');
+    textInputField.style.display = 'none';
+
+    // Hämtar "börja om från början-knappen" från DOM
+    startOverButton = document.getElementById("startOver");
+
+    // Anger att startOver ska visas
+    startOverButton.style.display = "block";
+  }
+}
+
+function task2_hoppa(input) {
+    
+    if (input == '10') {
+        taskTitle.innerText = "Uppgift 3";
+        taskDescription.innerText =
+            "Korrekt! Här kommer nästa uppgift...";
+    } else if (input !== '10') {
+        taskDescription.innerText =
+            "Fel svar! Rätt svar är: 10. GAME OVER!";
+
+        // Hämtar secondAnswerButton från DOM
+        secondAnswerButton = document.getElementById("secondAnswer");
+
+        // Anger att secondAnswerButton ska visas
+        secondAnswerButton.style.display = "none";
+
+        // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
+        let inputLabel = document.getElementById('inputLabel');
+        inputLabel.style.display = 'none';
+
+        let textInputField = document.getElementById('textInputField');
+        textInputField.style.display = 'none';
+
+        // Hämtar "börja om från början-knappen" från DOM
+        startOverButton = document.getElementById("startOver");
+
+        // Anger att startOver ska visas
+        startOverButton.style.display = "block";
+    }
+}
+
+function task2_ducka(input) {
+    
+    if (input == 'röd') {
+        taskTitle.innerText = "Uppgift 3";
+        taskDescription.innerText =
+            "Korrekt! Här kommer nästa uppgift...";
+
+            let manWithHat = document.getElementById("manWithHat");
+            manWithHat.style.display = "none";
+
+    } else if (input !== 'röd') {
+        taskDescription.innerText =
+            "Fel svar! Rätt svar är: röd. GAME OVER!";
+
+            let manWithHat = document.getElementById("manWithHat");
+            manWithHat.style.display = "none";
+
+        // Hämtar secondAnswerButton från DOM
+        thirdAnswerButton = document.getElementById("thirdAnswer");
+
+        // Anger att secondAnswerButton ska visas
+        thirdAnswerButton.style.display = "none";
+
+        // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
+        let inputLabel = document.getElementById('inputLabel');
+        inputLabel.style.display = 'none';
+
+        let textInputField = document.getElementById('textInputField');
+        textInputField.style.display = 'none';
+
+        // Hämtar "börja om från början-knappen" från DOM
+        startOverButton = document.getElementById("startOver");
+
+        // Anger att startOver ska visas
+        startOverButton.style.display = "block";
+    }
+}
+
+startGame();

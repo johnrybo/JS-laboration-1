@@ -1,5 +1,6 @@
 body {
     background-color: #283329;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -42,7 +43,7 @@ main {
 
 /* Användarens input */
 
-#answer {
+#textInputField {
     background-color: #FFFFFF;
     width: 15rem;
     margin-top: .5rem;
@@ -51,9 +52,9 @@ main {
     border: none;
 }
 
-/* Knapp för att skicka svar */
+/* Grön knapp som visas när användaren öppnar sidan */
 
-#submitAnswer {
+.greenButton{
     background-color: #A7D6AD;
     width: 10rem;
     margin-top: .5rem;
@@ -64,7 +65,7 @@ main {
 
 /* Knapp som skapas när användaren får GAME OVER */
 
-#gameContainer button {
+.redButton {
     background-color: firebrick;
     color: white;
     width: 10rem;
@@ -72,4 +73,22 @@ main {
     padding: .5rem;
     border-radius: 1000rem;
     border: none;
+}
+
+#secondAnswer {
+    display: none;
+}
+
+#thirdAnswer {
+    display: none;
+}
+
+#startOver {
+    display: none;
+}
+
+#manWithHat {
+    width: 200px;
+    height: auto;
+    display: none;
 }
