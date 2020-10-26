@@ -1,5 +1,5 @@
 function startGame() {
-  // let gameContainer = document.getElementById("gameContainer");
+ 
   let taskTitle = document.getElementById("taskTitle");
   let taskDescription = document.getElementById("taskDescription");
 
@@ -53,37 +53,26 @@ function task1(input) {
     let manWithHat = document.getElementById("manWithHat");
     manWithHat.style.display = "block";
 
-    // Hämtar firstAnswerButton från DOM
     let firstAnswerButton = document.getElementById("firstAnswer");
-
-    // Anger att answerButton inte ska visas
     firstAnswerButton.style.display = "none";
 
-    // Hämtar thirdAnswerButton från DOM
     thirdAnswerButton = document.getElementById("thirdAnswer");
-
-    // Anger att secondAnswerButton ska visas
     thirdAnswerButton.style.display = "block";
 
   } else {
     taskDescription.innerText =
       "Du valde varken att hoppa eller att ducka och blev träffad av objektet. GAME OVER!";
 
-    // Hämtar firstAnswerButton från DOM och anger att den inte ska visas
     let firstAnswerButton = document.getElementById("firstAnswer");
     firstAnswerButton.style.display = "none";
 
-    // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
     let inputLabel = document.getElementById('inputLabel');
     inputLabel.style.display = 'none';
 
     let textInputField = document.getElementById('textInputField');
     textInputField.style.display = 'none';
 
-    // Hämtar "börja om från början-knappen" från DOM
     startOverButton = document.getElementById("startOver");
-
-    // Anger att startOver ska visas
     startOverButton.style.display = "block";
   }
 }
@@ -98,23 +87,16 @@ function task2_hoppa(input) {
         taskDescription.innerText =
             "Fel svar! Rätt svar är: 10. GAME OVER!";
 
-        // Hämtar secondAnswerButton från DOM
         secondAnswerButton = document.getElementById("secondAnswer");
-
-        // Anger att secondAnswerButton ska visas
         secondAnswerButton.style.display = "none";
 
-        // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
         let inputLabel = document.getElementById('inputLabel');
         inputLabel.style.display = 'none';
 
         let textInputField = document.getElementById('textInputField');
         textInputField.style.display = 'none';
 
-        // Hämtar "börja om från början-knappen" från DOM
         startOverButton = document.getElementById("startOver");
-
-        // Anger att startOver ska visas
         startOverButton.style.display = "block";
     }
 }
@@ -136,23 +118,16 @@ function task2_ducka(input) {
             let manWithHat = document.getElementById("manWithHat");
             manWithHat.style.display = "none";
 
-        // Hämtar secondAnswerButton från DOM
         thirdAnswerButton = document.getElementById("thirdAnswer");
-
-        // Anger att secondAnswerButton ska visas
         thirdAnswerButton.style.display = "none";
 
-        // Hämtar inputLabel och textInputField från DOM och anger att de inte ska visas
         let inputLabel = document.getElementById('inputLabel');
         inputLabel.style.display = 'none';
 
         let textInputField = document.getElementById('textInputField');
         textInputField.style.display = 'none';
 
-        // Hämtar "börja om från början-knappen" från DOM
         startOverButton = document.getElementById("startOver");
-
-        // Anger att startOver ska visas
         startOverButton.style.display = "block";
     }
 }
