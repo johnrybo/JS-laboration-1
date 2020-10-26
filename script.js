@@ -10,11 +10,13 @@ function getAnswer() {
         taskDescription.innerText = 'Du valde att hoppa. För att komma vidare måste du...';
 
         // Funktion som är specifik för alternativet "hoppa"
+            // T.ex. svara rätt på ett mattetal
 
     } else if (userInput === 'ducka') {
         taskDescription.innerText = 'Du valde att ducka. För att komma vidare måste du...';
 
         // Funktion som är specifik för alternativet "ducka"
+            // T.ex. svara rätt på vem en person på en bild som dyker upp är
 
     } else {
         taskDescription.innerText = 'Du valde varken att hoppa eller att ducka. GAME OVER';
@@ -33,7 +35,6 @@ function getAnswer() {
 
         // Anger vad knappen ska innehålla för text
         startOverButton.innerHTML = 'Börja om från början';
-
     }
 
 }
