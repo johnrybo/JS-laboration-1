@@ -114,7 +114,7 @@ function task2_hoppa(input) {
 
     } else if (input !== '10') {
         taskDescription.innerText =
-            "Fel! Rätt svar är: 10. GAME OVER!";
+            "Fel! Rätt svar är: 10. Dörrvakten släppte inte in dig. GAME OVER!";
 
         answer2_1Button.style.display = "none";
         textInputField.style.display = 'none';
@@ -135,7 +135,7 @@ function task2_ducka(input) {
 
     } else if (input !== 'röd') {
         taskDescription.innerText =
-            "Fel! Rätt svar är: röd. GAME OVER!";
+            "Fel! Rätt svar är: röd. En person som paserade på gatan hörde att du svarade fel och skällde ut dig. GAME OVER!";
 
         manWithHat.style.display = "none";
         answer2_2Button.style.display = "none";

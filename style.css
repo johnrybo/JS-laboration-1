@@ -57,6 +57,7 @@ main {
     border-radius: 1000rem;
     border: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 /* Knapp som skapas när användaren får GAME OVER */
@@ -70,6 +71,7 @@ main {
     border-radius: 1000rem;
     border: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 #answer2_1, 
