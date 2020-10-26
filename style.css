@@ -21,6 +21,7 @@ main {
     background-color: #3A4A3C;
     padding: 3rem;
     width: 40rem;
+    border-radius: 1rem;
 }
 
 #taskTitle {
