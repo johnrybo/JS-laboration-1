@@ -8,6 +8,8 @@ function startGame() {
     "Ett objekt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad?";
 }
 
+let user = {};
+
 function submitFirstAnswer() {
   var userInput = document.getElementById("textInputField").value;
   task1(userInput);
