@@ -10,17 +10,20 @@ h1 {
 
 main {
     display: flex;
-    height: 90vh;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 #gameContainer {
     background-color: #3A4A3C;
-    padding: 3rem;
+    padding: 1rem;
     max-width: 40rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #taskTitle {
@@ -34,15 +37,17 @@ main {
 #inputForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Användarens input */
 
 #textInputField {
     background-color: #FFFFFF;
-    width: 10rem;
+    max-width: 20rem;
     margin-top: 1rem;
-    padding: .5rem;
+    padding: .8rem;
     border-radius: 1000rem;
     border: none;
 }
@@ -51,10 +56,10 @@ main {
 
 .greenButton{
     background-color: #A7D6AD;
-    width: 10rem;
+    max-width: 15rem;
     margin-top: 1rem;
-    padding: .5rem;
-    border-radius: 1000rem;
+    padding: .8rem;
+    border-radius: 10rem;
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -65,10 +70,10 @@ main {
 .redButton {
     background-color: firebrick;
     color: white;
-    width: 10rem;
+    max-width: 15rem;
     margin-top: 1rem;
-    padding: .5rem;
-    border-radius: 1000rem;
+    padding: .8rem;
+    border-radius: 10rem;
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -83,13 +88,13 @@ main {
 }
 
 #manWithHat {
-    width: 15rem;
+    max-width: 15rem;
     height: auto;
     display: none;
 }
 
 #lion {
-    width: 25rem;
+    max-width: 15rem;
     height: auto;
     display: none;
 }
