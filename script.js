@@ -4,10 +4,6 @@ let taskDescription = document.getElementById("taskDescription");
 
 // Anger värdet på taskTitle och taskDescription när sidan öppnas
 taskTitle.innerText = "Uppgift 1";
-taskDescription.innerText = "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad?";
-
-// Skapar ett användarobjekt
-let user = {};
 
 // Bilden på mannen i röd hatt
 let manWithHat = document.getElementById("manWithHat");
@@ -40,11 +36,15 @@ let currentScene = 0;
 function task(input) {
 
     if (input == scenes[currentScene].options[0]) {
+
       currentScene = scenes[currentScene].nextScene[0];
       taskDescription.innerText = scenes[currentScene].description;
+
       } else if (input == scenes[currentScene].options[1]) {
+
         currentScene = scenes[currentScene].nextScene[1];
         taskDescription.innerText = scenes[currentScene].description;
+
         } else {
           taskDescription.innerText = 'Ditt svar var ej giltigt. GAME OVER!';
           answerButton.style.display = 'none';
@@ -60,7 +60,7 @@ function task(input) {
 let scenes = [
   {
     id: 0,
-    description: 'test description id: 1',
+    description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad?",
     options: ['ducka', 'hoppa'],
     nextScene: [1, 2]
   },
@@ -90,11 +90,14 @@ let scenes = [
   },
   {
     id: 5,
-    description: 'Grattis du har klarat alla frågor! Vill du börja om?',
-    options: ['ja', 'nej'],
-
+    description: 'Grattis du har klarat alla frågor! Skriv "ja" för att börja om från början',
+    options: ['ja'],
+    nextScene: [0]
   }
 ];
+
+
+taskDescription.innerText = scenes[0].description;
 
 //////////////////////////////////////////////////////////////////////////////////
 

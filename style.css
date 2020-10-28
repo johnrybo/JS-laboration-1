@@ -79,14 +79,6 @@ main {
     cursor: pointer;
 }
 
-#answer2_1, 
-#answer2_2, 
-#answer3_1, 
-#answer3_2, 
-#startOver {
-    display: none;
-}
-
 #manWithHat {
     max-width: 15rem;
     height: auto;
