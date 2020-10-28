@@ -1,8 +1,4 @@
-// gameRules
-// let gameRules = document.getElementById('gameRules');
-// gameRules.innerText = 'Klicka på "Skicka svar" när du fyllt i ditt svar i textfältet. Använd inte Enter-tangenten. Uppdatera sidan för att börja om från början';
-
-// taskTitle och taskDescription
+// taskTitle, taskDescription & userInputField
 let taskTitle = document.getElementById("taskTitle");
 let taskDescription = document.getElementById("taskDescription");
 
@@ -22,26 +18,89 @@ let lion = document.getElementById('lion');
 // textInputField
 let textInputField = document.getElementById('textInputField');
 
-// Knappar
-let answer1Button = document.getElementById("answer1");
-answer1Button.addEventListener("click", submitAnswer1);
+// Input form
+let inputForm = document.getElementById('inputForm');
 
-let answer2_1Button = document.getElementById("answer2_1");
-answer2_1Button.addEventListener("click", submitAnswer2_1);
+// Svarsknapp
+let answerbutton = document.getElementById('answerButton');
+answerbutton.addEventListener("click", submitAnswer);
 
-let answer2_2Button = document.getElementById("answer2_2");
-answer2_2Button.addEventListener("click", submitAnswer2_2);
+function submitAnswer() {
+  let userInput = document.getElementById("textInputField").value;
+  task(userInput);
+  textInputField.value = '';
+}
 
-let answer3_1Button = document.getElementById("answer3_1");
-answer3_1Button.addEventListener("click", submitAnswer3_1);
+function startOver() {
+  location.reload();
+}
 
-let answer3_2Button = document.getElementById("answer3_2");
-answer3_2Button.addEventListener("click", submitAnswer3_2);
+let currentScene = 0;
 
-let startOverButton = document.getElementById("startOver");
-startOverButton.addEventListener("click", startOver);
+function task(input) {
+
+    if (input == scenes[currentScene].options[0]) {
+      currentScene = scenes[currentScene].nextScene[0];
+      taskDescription.innerText = scenes[currentScene].description;
+      } else if (input == scenes[currentScene].options[1]) {
+        currentScene = scenes[currentScene].nextScene[1];
+        taskDescription.innerText = scenes[currentScene].description;
+        } else {
+          taskDescription.innerText = 'Ditt svar var ej giltigt. GAME OVER!';
+          answerButton.style.display = 'none';
+          textInputField.style.display = 'none';
+          let restartButton = document.createElement('button');
+          restartButton.innerText = 'Börja om från början';
+          restartButton.classList.add('redButton');
+          restartButton.addEventListener("click", startOver);
+          inputForm.appendChild(restartButton);
+          }
+}
+
+let scenes = [
+  {
+    id: 0,
+    description: 'test description id: 1',
+    options: ['ducka', 'hoppa'],
+    nextScene: [1, 2]
+  },
+  {
+    id: 1,
+    description: 'Vill du springa eller flyga? (id: 1)',
+    options: ['springa', 'flyga'],
+    nextScene: [2]
+  },
+  {
+    id: 2,
+    description: 'Vill du sjunga eller prata (id: 2)',
+    options: ['sjunga', 'prata'],
+    nextScene: [3, 4]
+  },
+  {
+    id: 3,
+    description: 'Är du snäll? (id: 3)',
+    options: ['ja', 'nej'],
+    nextScene: [4]
+  },
+  {
+    id: 4,
+    description: 'Vill du ha kaffe? (id: 4)',
+    options: ['kanske', 'kanske inte'],
+    nextScene: [5]
+  },
+  {
+    id: 5,
+    description: 'Grattis du har klarat alla frågor! Vill du börja om?',
+    options: ['ja', 'nej'],
+
+  }
+];
+
+//////////////////////////////////////////////////////////////////////////////////
 
 // Funktioner för knapparna
+
+/*
 function submitAnswer1() {
   let userInput = document.getElementById("textInputField").value;
   task1(userInput);
@@ -71,23 +130,11 @@ function submitAnswer3_1() {
     task3_2(userInput);
     textInputField.value = '';
   }
-
-function startOver() {
-    location.reload();
-}
-
-// Funktion som styr vad Enter-knappen gör när ett textfält är markerat
-
-    /*
-    textInputField.addEventListener("keyup", function(event) {
-        if (event.key === 'Enter') {
-         event.preventDefault();
-         document.getElementById('answer1').click();
-        }
-      });
-    */
+  */
 
 // Funktioner för olika tasks
+
+/*
 function task1(input) {
 
   if (input == "hoppa") {
@@ -203,3 +250,4 @@ function task3_2(input) {
     startOverButton.style.display = "block";
 }
 }
+*/
