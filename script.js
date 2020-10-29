@@ -1,38 +1,22 @@
-// gameContainer
-let gameContainer = document.getElementById('gameContainer');
-
-// taskDescription
 let taskDescription = document.getElementById("taskDescription");
-
-// Image container
 let imageContainer = document.getElementById('imageContainer');
+let inputForm = document.getElementById('inputForm');
+let textInputField = document.getElementById('textInputField');
+let sendAnswerbutton = document.getElementById('sendAnswerButton');
+    sendAnswerbutton.addEventListener("click", submitAnswer);
 
-// Bilder
 let lion = document.createElement('img');
     lion.src = 'images/lion.jpg';
-    lion.style.maxWidth = '300px';
+    lion.style.maxWidth = '15rem';
 
 let manWithHat = document.createElement("img");
     manWithHat.src = 'images/manWithHat.jpg';
-    manWithHat.style.maxWidth = '300px';
+    manWithHat.style.maxWidth = '15rem';
 
-// Input container
-let inputContainer = document.getElementById('inputContainer');
-
-// textInputField
-let textInputField = document.getElementById('textInputField');
-
-// Svarsknapp
-let answerbutton = document.getElementById('answerButton');
-answerbutton.addEventListener("click", submitAnswer);
-
-// Kör startGame när sidan öppnas
 window.onload = startGame;
 
 function startGame() {
   taskDescription.innerText = scenes[0].description;
-  // loopScenes();
-  
 }
 
 function submitAnswer() {
@@ -45,7 +29,6 @@ function submitAnswer() {
 
   addImage(lion, 2);
   removeImage(lion, 2);
-  console.log(userInput);
 }
 
 function startOver() {
@@ -69,16 +52,15 @@ function task(input) {
 
         } else {
           taskDescription.innerText = 'Ditt svar var ej giltigt. GAME OVER!';
-          answerButton.style.display = 'none';
+          sendAnswerButton.style.display = 'none';
           textInputField.style.display = 'none';
-          let restartButton = document.createElement('button');
-          restartButton.innerText = 'Börja om från början';
-          restartButton.classList.add('redButton');
-          restartButton.addEventListener("click", startOver);
-          inputContainer.append(restartButton);
+          let restartGameButton = document.createElement('button');
+          restartGameButton.innerText = 'Börja om från början';
+          restartGameButton.classList.add('redButton');
+          restartGameButton.addEventListener("click", startOver);
+          inputForm.append(restartGameButton);
           }
 }
-
 
 function addImage(image, scene){    
     if (taskDescription.innerText == scenes[scene].description) {
