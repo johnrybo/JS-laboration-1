@@ -1,25 +1,26 @@
-// taskTitle, taskDescription & userInputField
-let taskTitle = document.getElementById("taskTitle");
+// taskDescription
 let taskDescription = document.getElementById("taskDescription");
 
-// Anger värdet på taskTitle och taskDescription när sidan öppnas
-taskTitle.innerText = "Uppgift 1";
-
-// Bilden på mannen i röd hatt
+// Bilder
 let manWithHat = document.getElementById("manWithHat");
-
-// Bilden på lejonet
 let lion = document.getElementById('lion');
+
+// Input container
+let inputContainer = document.getElementById('inputContainer');
 
 // textInputField
 let textInputField = document.getElementById('textInputField');
 
-// Input form
-let inputForm = document.getElementById('inputForm');
-
 // Svarsknapp
 let answerbutton = document.getElementById('answerButton');
 answerbutton.addEventListener("click", submitAnswer);
+
+// Kör startGame när sidan öppnas
+window.onload = startGame;
+
+function startGame() {
+  taskDescription.innerText = scenes[0].description;
+}
 
 function submitAnswer() {
   let userInput = document.getElementById("textInputField").value;
@@ -53,7 +54,7 @@ function task(input) {
           restartButton.innerText = 'Börja om från början';
           restartButton.classList.add('redButton');
           restartButton.addEventListener("click", startOver);
-          inputForm.appendChild(restartButton);
+          inputContainer.append(restartButton);
           }
 }
 
@@ -68,7 +69,7 @@ let scenes = [
     id: 1,
     description: 'Vill du springa eller flyga? (id: 1)',
     options: ['springa', 'flyga'],
-    nextScene: [2]
+    nextScene: [2, 2]
   },
   {
     id: 2,
@@ -80,13 +81,13 @@ let scenes = [
     id: 3,
     description: 'Är du snäll? (id: 3)',
     options: ['ja', 'nej'],
-    nextScene: [4]
+    nextScene: [4, 4]
   },
   {
     id: 4,
     description: 'Vill du ha kaffe? (id: 4)',
     options: ['kanske', 'kanske inte'],
-    nextScene: [5]
+    nextScene: [5, 5]
   },
   {
     id: 5,
@@ -95,9 +96,6 @@ let scenes = [
     nextScene: [0]
   }
 ];
-
-
-taskDescription.innerText = scenes[0].description;
 
 //////////////////////////////////////////////////////////////////////////////////
 

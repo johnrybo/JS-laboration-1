@@ -34,7 +34,7 @@ main {
     color: #FFFFFF;
 }
 
-#inputForm {
+#inputContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
