@@ -78,7 +78,7 @@ function removeImage(image, scene) {
 let scenes = [
   {
     id: 0,
-    description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad? DUCKA / HOPPA (index: 0)",
+    description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande emot dig, vill du hoppa eller ducka för att undvika att bli träffad? DUCKA / HOPPA (index: 0)",
     options: ['ducka', 'hoppa'],
     nextScene: [1, 2]
   },
