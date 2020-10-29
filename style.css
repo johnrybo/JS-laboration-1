@@ -75,6 +75,10 @@ main {
     border: none;
 }
 
+input[type="text"] {
+    font-size: inherit;
+  }
+
 /* Grön knapp som visas när användaren öppnar sidan */
 
 .greenButton{
@@ -84,6 +88,7 @@ main {
     padding: .8rem;
     border-radius: 10rem;
     border: solid transparent 2px;
+    font-size: inherit;
     font-weight: 600;
     cursor: pointer;
 }
@@ -97,6 +102,7 @@ main {
     padding: .8rem;
     border-radius: 10rem;
     border: solid transparent 2px;
+    font-size: inherit;
     font-weight: 600;
     cursor: pointer;
 }
