@@ -65,6 +65,7 @@ function task(input) {
 function addImage(image, scene){    
     if (taskDescription.innerText == scenes[scene].description) {
       imageContainer.append(image);
+      image.style.display = 'block';
     }
 }
     
@@ -77,37 +78,61 @@ function removeImage(image, scene) {
 let scenes = [
   {
     id: 0,
-    description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad?",
+    description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande mot dig, vill du hoppa eller ducka för att undvika att bli träffad? DUCKA / HOPPA (index: 0)",
     options: ['ducka', 'hoppa'],
     nextScene: [1, 2]
   },
   {
     id: 1,
-    description: 'En man med röd hatt undrar om du vill du springa eller flyga? (id: 1)',
-    options: ['springa', 'flyga'],
-    nextScene: [2, 2]
+    description: 'En man som blev imponerad av hur snabbt du duckade undrar om du kan berätta för honom vilken färg hans hatt är. RÖD (index: 1)',
+    options: ['röd'],
+    nextScene: [3]
   },
   {
     id: 2,
-    description: 'Ett lejon undrar om du vill du sjunga eller prata (id: 2)',
-    options: ['sjunga', 'prata'],
-    nextScene: [3, 4]
+    description: 'Efter att du landat från ditt hopp ser du ett lejon som står och vrålar runt hörnet. Vill du gå fram och klappa? JA / NEJ (index: 2)',
+    options: ['ja', 'nej'],
+    nextScene: [4, 5]
   },
   {
     id: 3,
-    description: 'Är du snäll? (id: 3)',
-    options: ['ja', 'nej'],
-    nextScene: [4, 4]
+    description: 'Mannen med den röda hatten blev otroligt tacksam och gav dig 50 kr i belöning. Vill du spara pengarna eller gå och köpa en öl? SPARA / KÖPA ÖL (index: 3)',
+    options: ['spara', 'köpa öl'],
+    nextScene: [6, 7]
   },
   {
     id: 4,
-    description: 'Vill du ha kaffe? (id: 4)',
-    options: ['kanske', 'kanske inte'],
-    nextScene: [5, 5]
+    description: 'Du blev tyvärr uppäten av lejonet. Skriva svaret på 5 + 5 för att börja om från början med hedern i behåll. 10 (index: 4)',
+    options: ['10'],
+    nextScene: [0]
   },
   {
     id: 5,
-    description: 'Grattis du har klarat alla frågor! Skriv "ja" för att börja om från början',
+    description: 'Smart val att inte gå fram och klappa lejonet. Som om det inte vore nog hittar du 50 kr på marken framför dig, inte helt omöjligt att en man med röd hatt kan ha tappat den. Hursomhelst, vill du spara pengarna eller gå och köpa öl? SPARA / KÖPA ÖL (index: 5)',
+    options: ['spara', 'köpa öl'],
+    nextScene: [6, 7]
+  },
+  {
+    id: 6,
+    description: 'Duktigt och ekonomiskt av dig. Vill du gå in på närmsta bank och sätta in pengarna på ditt konto istället? JA / NEJ (index: 6)',
+    options: ['ja', 'nej'],
+    nextScene: [8, 9]
+  },
+  {
+    id: 7,
+    description: 'Mmm vad gott det var med en öl. Du har fattat många bra beslutet under spelets gång! Skriv "ja" för att börja om från början. JA (index: 7)',
+    options: ['ja'],
+    nextScene: [0]
+  },
+  {
+    id: 8,
+    description: 'Pengarna är inne på kontot inom 1-2 bankdagar. Slutet gott allting gott. Skriv "ja" för att börja om från början. JA (index: 8)',
+    options: ['ja'],
+    nextScene: [0]
+  },
+  {
+    id: 9,
+    description: 'Dumt val! En rånare dök upp precis efter att du gått förbi banken och du blev av med dina pengar. Skriv "ja" för att börja om från början. JA (index: 9)',
     options: ['ja'],
     nextScene: [0]
   }
