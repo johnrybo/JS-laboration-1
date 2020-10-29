@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboration 1</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
 
 <main>
 
-<h1>En textbaserad interaktiv upplevelse</h1>
-
 <div id="gameContainer">
 
+    <div id="imageContainer"></div>
     <p id="taskDescription"></p>
-
-    <!--
-        <img id="manWithHat" src="images/manWithHat.jpg">
-        <img id="lion" src="images/lion.jpg">
-    -->
 
     <!--
         http://isolani.co.uk/articles/simpleJavascriptAndForms.html
@@ -29,12 +24,16 @@
         stops the form from being submitted.
     -->
 
-        <div id="inputContainer">
+        <form id="inputContainer" action="" onsubmit="return false">
 
         <input type="text" id="textInputField" placeholder="Skriv ditt svar här">
         <button id="answerButton" class="greenButton">Skicka svar</button>
 
-        </div>
+        </form>
+
+        <!--
+            <div id="inputContainer"></div>
+        -->
 
 </div>
 

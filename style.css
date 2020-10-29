@@ -1,23 +1,32 @@
-body {
-    background-color: #283329;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
-    color: #759679;
-    text-align: center;
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-color: #283329;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 #gameContainer {
-    background-color: #3A4A3C;
-    padding: 1rem;
+    background-color: #2d362f;
+    padding: 2rem;
+    margin: 1rem;
     max-width: 40rem;
+    border: solid white 2px;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -26,12 +35,9 @@ main {
     text-align: center;
 }
 
-#taskTitle {
-    color: #A7D6AD;
-}
-
 #taskDescription {
     color: #FFFFFF;
+    margin-bottom: 2rem;
 }
 
 #inputContainer {
@@ -46,8 +52,8 @@ main {
 #textInputField {
     background-color: #FFFFFF;
     max-width: 20rem;
-    margin-top: 1rem;
     padding: .8rem;
+    margin-bottom: 2rem;
     border-radius: 1000rem;
     border: none;
 }
@@ -55,12 +61,12 @@ main {
 /* Grön knapp som visas när användaren öppnar sidan */
 
 .greenButton{
-    background-color: #A7D6AD;
+    background-color: #A1C2A8;
+    color: 2d362f;
     max-width: 15rem;
-    margin-top: 1rem;
     padding: .8rem;
     border-radius: 10rem;
-    border: none;
+    border: solid transparent 2px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -71,22 +77,29 @@ main {
     background-color: firebrick;
     color: white;
     max-width: 15rem;
-    margin-top: 1rem;
     padding: .8rem;
     border-radius: 10rem;
-    border: none;
+    border: solid transparent 2px;
     font-weight: 600;
     cursor: pointer;
 }
 
-#manWithHat {
-    max-width: 15rem;
-    height: auto;
-    display: none;
+#imageContainer {
+    margin-bottom: 2rem;
 }
 
-#lion {
+.greenButton:hover, .redButton:hover {
+    border: solid white 2px;
+}
+
+#manWithHat, #lion {
     max-width: 15rem;
     height: auto;
-    display: none;
+}
+
+#background {
+    position: fixed; 
+    z-index: -99; 
+    width: 100%; 
+    height: 100%;
 }
