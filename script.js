@@ -53,6 +53,8 @@ function startGame() {
 function submitAnswer(event) {
   
   event.preventDefault();
+
+  /** Den text som användaren skrivit i textfältet */
   let userInput = document.getElementById("textInputField").value.toLowerCase();
   task(userInput);
   textInputField.value = '';
