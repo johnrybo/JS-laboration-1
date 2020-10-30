@@ -47,7 +47,10 @@ function submitAnswer(event) {
   imageFunction();
 }
 
-/** Startar om spelet genom att ladda om sidan */
+/**
+ * Startar om spelet genom att ladda om sidan
+ * @param {Event} event 
+ */
 function startOver(event) {
 
   event.preventDefault();
