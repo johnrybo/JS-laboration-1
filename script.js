@@ -51,7 +51,7 @@ function startGame() {
  * @param {Event} event 
  */
 function submitAnswer(event) {
-  // Förhindrar webbläsaren att ladda om sidan när formuläret skickas
+  // Förhindrar att webbläsaren laddas om när formuläret skickas
   event.preventDefault();
 
   /** Den text som användaren skrivit i textfältet */
@@ -67,7 +67,7 @@ function submitAnswer(event) {
  * @param {Event} event 
  */
 function startOver(event) {
-  // Förhindrar webbläsaren att ladda om sidan när formuläret skickas
+  // Förhindrar att webbläsaren laddas om när formuläret skickas (hindrar att restartGameButton visas två gånger innan sidan har laddats om vid klick)
   event.preventDefault();
 
   // Laddar om sidan
