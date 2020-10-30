@@ -39,6 +39,7 @@ let robbery = document.createElement("img");
     robbery.src = 'images/robbery.jpg';
     robbery.style.maxWidth = '15rem';
 
+// Anger att vad som ska hända när sidan laddas in
 window.onload = startGame;
 
 /** Startar spelet */
