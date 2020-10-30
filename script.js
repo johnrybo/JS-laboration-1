@@ -1,9 +1,9 @@
 let taskDescription = document.getElementById("taskDescription");
 let imageContainer = document.getElementById('imageContainer');
 let inputForm = document.getElementById('inputForm');
+    inputForm.addEventListener("submit", submitAnswer);
 let textInputField = document.getElementById('textInputField');
 let sendAnswerbutton = document.getElementById('sendAnswerButton');
-    sendAnswerbutton.addEventListener("click", submitAnswer);
 
 // Bilder
 let lion = document.createElement('img');
@@ -33,8 +33,13 @@ function startGame() {
   taskDescription.innerText = scenes[0].description;
 }
 
-/** Bestämmer vad som händer när användaren svarat på en fråga */
-function submitAnswer() {
+/**
+ * Bestämmer vad som händer när användaren svarat på en fråga
+ * @param {Event} event 
+ */
+function submitAnswer(event) {
+  
+  event.preventDefault();
   let userInput = document.getElementById("textInputField").value;
   task(userInput);
   textInputField.value = '';
@@ -51,7 +56,7 @@ let currentScene = 0;
 
 /**
  * Flyttar användaren mellan olika scener beroende på vad användaren svarar
- * @param {*} input Användarens svar i form av text som anges i textfältet
+ * @param {InputEvent} input Användarens svar i form av text som anges i textfältet
  */
 function task(input) {
 
