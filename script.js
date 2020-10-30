@@ -1,27 +1,40 @@
+/** Text som beskriver vad uppgiften går ut på */
 let taskDescription = document.getElementById("taskDescription");
+
+/** En container där bilder placeras beroende på vilken scen användaren går till */
 let imageContainer = document.getElementById('imageContainer');
+
+/** Formulär som innehåller ett textfält för input och en knapp för att skicka input / svara på den aktuella uppgiften */
 let inputForm = document.getElementById('inputForm');
     inputForm.addEventListener("submit", submitAnswer);
-let textInputField = document.getElementById('textInputField');
-let sendAnswerbutton = document.getElementById('sendAnswerButton');
 
-// Bilder
+/** Textfält för användarens input */
+let textInputField = document.getElementById('textInputField');
+
+/** Knapp för att skicka input / svara på den aktuella uppgiften */
+let sendAnswerButton = document.getElementById('sendAnswerButton');
+
+/** Bild på ett lejon */
 let lion = document.createElement('img');
     lion.src = 'images/lion.jpg';
     lion.style.maxWidth = '15rem';
 
+/** Bild på en man med röd hatt */
 let manWithHat = document.createElement("img");
     manWithHat.src = 'images/manWithHat.jpg';
     manWithHat.style.maxWidth = '15rem';
 
+/** Bild på öl */
 let beer = document.createElement("img");
     beer.src = 'images/beer.jpg';
     beer.style.maxWidth = '15rem';
 
+/** Bild på en bank */
 let bank = document.createElement("img");
     bank.src = 'images/bank.jpg';
     bank.style.maxWidth = '15rem';
 
+/** Bild på en rånare */
 let robbery = document.createElement("img");
     robbery.src = 'images/robbery.jpg';
     robbery.style.maxWidth = '15rem';
@@ -40,7 +53,7 @@ function startGame() {
 function submitAnswer(event) {
   
   event.preventDefault();
-  let userInput = document.getElementById("textInputField").value;
+  let userInput = document.getElementById("textInputField").value.toLowerCase();
   task(userInput);
   textInputField.value = '';
 
@@ -57,6 +70,7 @@ function startOver(event) {
   location.reload();
 }
 
+/** Den nuvarande scenen som presenteras på sidan */
 let currentScene = 0;
 
 /**
@@ -82,6 +96,7 @@ function task(input) {
           textInputField.style.display = 'none';
           imageContainer.style.display = 'none';
 
+          /** Knapp som används för att starta om spelet */
           let restartGameButton = document.createElement('button');
           restartGameButton.innerText = 'Börja om från början';
           restartGameButton.classList.add('redButton');
@@ -100,11 +115,19 @@ function imageFunction() {
   } 
 }
 
+/** 
+ * En lista över de scener som användaren kan interagera med
+ * @description Beskrivning av den aktuella scenen
+ * @options De alternativ som är giltiga inputs av användaren
+ * @image Den bild som presenteras på sidan för den aktuella scenen
+ * @nextScene De alternativa scener som användaren kan flyttas till beroende på input
+*/
 let scenes = [
+
   {
     description: "Du går runt i en ny spännande stad när ett farligt objekt plötsligt kommer flygande emot dig. Vill du hoppa eller ducka för att undvika att bli träffad?",
     options: ['ducka', 'hoppa'],
-    // image: undefined,
+    image: undefined,
     nextScene: [1, 2]
   },
   {
@@ -122,19 +145,19 @@ let scenes = [
   {
     description: 'Mannen med den röda hatten blev otroligt tacksam och gav dig 50 kr i belöning. Vill du spara pengarna eller gå och köpa öl? (spara / köpa öl)',
     options: ['spara', 'köpa öl'],
-    // image: undefined,
+    image: undefined,
     nextScene: [6, 7]
   },
   {
     description: 'Du blev tyvärr uppäten av lejonet. Skriva svaret på 5 + 5 för att börja om från början med hedern i behåll.',
     options: ['10'],
-    // image: undefined,
+    image: undefined,
     nextScene: [0]
   },
   {
     description: 'Smart val att inte gå fram och klappa lejonet. Som om det inte vore nog hittar du 50 kr på marken framför dig, inte helt omöjligt att en man med röd hatt kan ha tappat den. Hursomhelst, vill du spara pengarna eller gå och köpa öl? (spara / köpa öl)',
     options: ['spara', 'köpa öl'],
-    // image: undefined,
+    image: undefined,
     nextScene: [6, 7]
   },
   {
@@ -152,7 +175,7 @@ let scenes = [
   {
     description: 'Pengarna är inne på kontot inom 1-2 bankdagar. Slutet gott allting gott. Skriv "om jag fortsätter såhär kommer jag snart bli rik" för att börja om från början.',
     options: ['om jag fortsätter såhär kommer jag snart bli rik'],
-    // image: undefined,
+    image: undefined,
     nextScene: [0]
   },
   {
