@@ -48,7 +48,9 @@ function submitAnswer(event) {
 }
 
 /** Startar om spelet genom att ladda om sidan */
-function startOver() {
+function startOver(event) {
+
+  event.preventDefault();
   location.reload();
 }
 
