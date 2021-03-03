@@ -6,4 +6,4 @@ Uppgiften gick ut på att man skulle skapa en textbaserad interaktiv upplevelse 
 
 <b>Demo-länk</b>
 <br>
-https://johnrybo.github.io/JS-laboration-1/
+https://johnrybo.github.io/Textbaserad-interaktiv-upplevelse
